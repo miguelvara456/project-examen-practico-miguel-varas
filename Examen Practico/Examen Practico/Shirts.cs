@@ -9,9 +9,7 @@ namespace Examen_Practico
     public class Shirts : Garment
     {
         public bool maoNeck;
-        public bool defaultNeck;
         public bool shortSleeve;
-        public bool longSleeve;
         public Shirts(QualityGarment quality, float priceUnit, int count)
         {
             this.Quality = quality;

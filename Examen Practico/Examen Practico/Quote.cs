@@ -14,21 +14,69 @@ namespace Examen_Practico
         public int SellerCode{get; private set;}
         public int QuotedUnits{get; private set;}
         public float QuotedResult{get; private set;}
+        public Garment quotedGarment {get; private set; }
 
-        public Garment quotedGarment;
-
-        public Quote(int numberId, string dateHour, int sellerCode, int quotedUnits, float quotedResult)
+        public Quote(int numberId, string dateHour, int sellerCode, int quotedUnits)
         {
             this.NumberId = numberId;
             this.DateHour = dateHour;
             this.SellerCode = sellerCode;
             this.QuotedUnits = quotedUnits;
-            this.QuotedResult = quotedResult;
         }
 
-        public void CalculateQuote()
+        private void CalculateQuoteTrousers(Trousers trouser)
         {
+            QuotedResult = trouser.PriceUnit;
 
+            if(trouser.chupin)
+            {
+                var percent = ((12 * QuotedResult) / 100);
+                QuotedResult -= percent;
+                //-12%
+            }
+
+            switch (trouser.Quality)
+            {
+                case QualityGarment.premium:
+                    var percent = ((30 * QuotedResult) / 100);
+                    QuotedResult += percent;
+                    //+30%
+                    break;
+                case QualityGarment.standard:
+                    //no change price
+                    break;
+            }
+            quotedGarment = trouser;
+        }
+
+        private void CalculateQuoteShirts(Shirts shirt)
+        {
+            if (shirt.shortSleeve)
+            {
+                var percent = ((10 * QuotedResult) / 100);
+                QuotedResult -= percent;
+                //-10%
+            }
+
+            if (shirt.maoNeck)
+            {
+                var percent = ((3 * QuotedResult) / 100);
+                QuotedResult += percent;
+                //+3%
+            }
+
+            switch (shirt.Quality)
+            {
+                case QualityGarment.premium:
+                    var percent = ((30 * QuotedResult) / 100);
+                    QuotedResult += percent;
+                    //+30%
+                    break;
+                case QualityGarment.standard:
+                    //no change price
+                    break;
+            }
+            quotedGarment = shirt;
         }
 
     }

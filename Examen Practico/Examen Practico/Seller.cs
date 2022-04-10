@@ -17,6 +17,7 @@ namespace Examen_Practico
         {
             this.LastName = lastName;
             this.SellerCode = sellerCode;
+            quotes = new List<Quote>(0);
         }
 
         public void CreateQuote()

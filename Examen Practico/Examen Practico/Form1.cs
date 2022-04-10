@@ -12,15 +12,22 @@ namespace Examen_Practico
 {
     public partial class Form1 : Form
     {
+        private Shop shop;
+        private Seller seller;
+        private bool isListQuotedOpen;
         public Form1()
         {
             InitializeComponent();
+            shop = new Shop("Abasto", "Av. Corrientes 1234", "Capital Federal", "1233", "Buenos Aires");
+            seller = new Seller("Miguel Varas", 1238493812);
+            labelNameShop.Text = shop.ShopName;
+            labelAddressShop.Text = shop.Address;
+            labelLastNameAndSellerCode.Text = $"{seller.LastName} | Codigo Vendedor: {seller.SellerCode}";
         }
-
 
         private void radioButtonTrousers_CheckedChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void radioButtonShirt_CheckedChanged(object sender, EventArgs e)
@@ -75,7 +82,8 @@ namespace Examen_Practico
 
         private void labelHistoryQuotes_Click(object sender, EventArgs e)
         {
-
+                Form2 formQuotedList = new Form2(seller.GetListQuotes());
+                formQuotedList.Show();
         }
     }
 }

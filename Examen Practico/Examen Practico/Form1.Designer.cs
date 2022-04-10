@@ -109,7 +109,7 @@ namespace Examen_Practico
             this.labelAddressShop.BackColor = System.Drawing.Color.Transparent;
             this.labelAddressShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddressShop.ForeColor = System.Drawing.Color.BlueViolet;
-            this.labelAddressShop.Location = new System.Drawing.Point(321, 86);
+            this.labelAddressShop.Location = new System.Drawing.Point(318, 86);
             this.labelAddressShop.Margin = new System.Windows.Forms.Padding(3);
             this.labelAddressShop.Name = "labelAddressShop";
             this.labelAddressShop.Size = new System.Drawing.Size(152, 15);
