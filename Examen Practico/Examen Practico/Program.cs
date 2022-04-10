@@ -8,7 +8,6 @@ namespace Examen_Practico
 {
     static class Program
     {
-        private static bool ca = false;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

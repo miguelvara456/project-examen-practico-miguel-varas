@@ -16,5 +16,66 @@ namespace Examen_Practico
         {
             InitializeComponent();
         }
+
+
+        private void radioButtonTrousers_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonShirt_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxChupin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxShortSleeve_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxLongSleeve_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void texCount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textDisponibleStock_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonPremium_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonStandard_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonQuote_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelHistoryQuotes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

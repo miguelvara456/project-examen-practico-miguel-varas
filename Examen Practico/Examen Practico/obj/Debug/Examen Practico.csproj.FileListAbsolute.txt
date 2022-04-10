@@ -1,0 +1,10 @@
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\bin\Debug\Examen Practico.exe.config
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\bin\Debug\Examen Practico.exe
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\bin\Debug\Examen Practico.pdb
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen Practico.csproj.AssemblyReference.cache
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen_Practico.Form1.resources
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen_Practico.Properties.Resources.resources
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen Practico.csproj.GenerateResource.cache
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen Practico.csproj.CoreCompileInputs.cache
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen Practico.exe
+C:\Users\migue\project-examen-practico-miguel-varas\Examen Practico\Examen Practico\obj\Debug\Examen Practico.pdb
