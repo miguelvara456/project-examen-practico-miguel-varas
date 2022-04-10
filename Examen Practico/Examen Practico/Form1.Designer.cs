@@ -124,6 +124,7 @@ namespace Examen_Practico
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHistoryQuotes.AutoSize = true;
             this.labelHistoryQuotes.BackColor = System.Drawing.Color.Transparent;
+            this.labelHistoryQuotes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelHistoryQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHistoryQuotes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelHistoryQuotes.Location = new System.Drawing.Point(328, 119);
@@ -405,6 +406,7 @@ namespace Examen_Practico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(481, 561);
             this.Controls.Add(this.buttonQuote);
@@ -420,6 +422,7 @@ namespace Examen_Practico
             this.Controls.Add(this.labelAddressShop);
             this.Controls.Add(this.labelTittle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Cotizaciones";
             this.groupBoxGarment.ResumeLayout(false);
