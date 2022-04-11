@@ -14,7 +14,7 @@ namespace Examen_Practico
         public string PostalCode { get; private set;}
         public string Country { get; private set; }
 
-        public List<Garment> garments;
+        private List<Garment> garments;
         public Shop(string shopName, string address, string state, string postalCode, string country)
         {
             this.Address = address;
@@ -22,6 +22,12 @@ namespace Examen_Practico
             this.PostalCode = postalCode;
             this.ShopName = shopName;
             this.State = state;
+            garments = new List<Garment>(0);
+        }
+
+        public Garment GetGarmentToShop(int garmentIndex)
+        {
+            return garments[garmentIndex];
         }
 
         public void AddGarmentToShop(Garment garment)

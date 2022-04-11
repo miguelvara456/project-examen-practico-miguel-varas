@@ -36,11 +36,13 @@ namespace Examen_Practico
             // 
             this.listBoxQuotes.BackColor = System.Drawing.Color.Indigo;
             this.listBoxQuotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBoxQuotes.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.listBoxQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxQuotes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.listBoxQuotes.FormattingEnabled = true;
+            this.listBoxQuotes.ItemHeight = 15;
             this.listBoxQuotes.Location = new System.Drawing.Point(12, 13);
             this.listBoxQuotes.Name = "listBoxQuotes";
-            this.listBoxQuotes.Size = new System.Drawing.Size(763, 418);
+            this.listBoxQuotes.Size = new System.Drawing.Size(763, 407);
             this.listBoxQuotes.TabIndex = 0;
             // 
             // Form2
@@ -51,7 +53,7 @@ namespace Examen_Practico
             this.ClientSize = new System.Drawing.Size(787, 450);
             this.Controls.Add(this.listBoxQuotes);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Historial de Cotizaciones";
             this.ResumeLayout(false);
 
         }

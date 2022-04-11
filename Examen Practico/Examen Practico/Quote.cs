@@ -14,69 +14,71 @@ namespace Examen_Practico
         public int SellerCode{get; private set;}
         public int QuotedUnits{get; private set;}
         public float QuotedResult{get; private set;}
-        public Garment quotedGarment {get; private set; }
+        public Garment QuotedGarment {get; private set; }
 
-        public Quote(int numberId, string dateHour, int sellerCode, int quotedUnits)
+        public Quote( int sellerCode, int quotedUnits)
         {
-            this.NumberId = numberId;
-            this.DateHour = dateHour;
+            this.NumberId = new Random().Next(1000000, 9000000);
+            this.DateHour = DateTime.Now.ToString();
             this.SellerCode = sellerCode;
             this.QuotedUnits = quotedUnits;
         }
 
-        private void CalculateQuoteTrousers(Trousers trouser)
+        public void CalculateQuoteTrousers(Trousers trouser)
         {
-            QuotedResult = trouser.PriceUnit;
+            QuotedResult = trouser.priceUnit;
 
             if(trouser.chupin)
             {
-                var percent = ((12 * QuotedResult) / 100);
-                QuotedResult -= percent;
+                var percent = ((12 * trouser.priceUnit) / 100);
+                trouser.priceUnit -= percent;
                 //-12%
             }
 
-            switch (trouser.Quality)
+            switch (trouser.quality)
             {
                 case QualityGarment.premium:
-                    var percent = ((30 * QuotedResult) / 100);
-                    QuotedResult += percent;
+                    var percent = ((30 * trouser.priceUnit) / 100);
+                    trouser.priceUnit += percent;
                     //+30%
                     break;
                 case QualityGarment.standard:
                     //no change price
                     break;
             }
-            quotedGarment = trouser;
+            QuotedGarment = trouser;
+            QuotedResult = trouser.priceUnit;
         }
 
-        private void CalculateQuoteShirts(Shirts shirt)
+        public void CalculateQuoteShirts(Shirts shirt)
         {
             if (shirt.shortSleeve)
             {
-                var percent = ((10 * QuotedResult) / 100);
-                QuotedResult -= percent;
+                var percent = ((10 * shirt.priceUnit) / 100);
+                shirt.priceUnit -= percent;
                 //-10%
             }
 
             if (shirt.maoNeck)
             {
-                var percent = ((3 * QuotedResult) / 100);
-                QuotedResult += percent;
+                var percent = ((3 * shirt.priceUnit) / 100);
+                shirt.priceUnit += percent;
                 //+3%
             }
 
-            switch (shirt.Quality)
+            switch (shirt.quality)
             {
                 case QualityGarment.premium:
-                    var percent = ((30 * QuotedResult) / 100);
-                    QuotedResult += percent;
+                    var percent = ((30 * shirt.priceUnit) / 100);
+                    shirt.priceUnit += percent;
                     //+30%
                     break;
                 case QualityGarment.standard:
                     //no change price
                     break;
             }
-            quotedGarment = shirt;
+            QuotedGarment = shirt;
+            QuotedResult = shirt.priceUnit;
         }
 
     }

@@ -10,11 +10,5 @@ namespace Examen_Practico
     {
         public bool maoNeck;
         public bool shortSleeve;
-        public Shirts(QualityGarment quality, float priceUnit, int count)
-        {
-            this.Quality = quality;
-            this.PriceUnit = priceUnit;
-            this.Count = count;
-        }
     }
 }

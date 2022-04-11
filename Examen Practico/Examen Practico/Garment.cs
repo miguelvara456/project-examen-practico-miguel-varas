@@ -13,8 +13,10 @@ namespace Examen_Practico
 
     public abstract class Garment
     {
-        public QualityGarment Quality;
-        public float PriceUnit { get; protected set; }
-        public int Count { get; protected set; }
+        public QualityGarment quality;
+
+        public float priceUnit;
+
+        public int count;
     }
 }

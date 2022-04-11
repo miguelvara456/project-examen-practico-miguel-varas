@@ -39,10 +39,9 @@ namespace Examen_Practico
             this.radioButtonTrousers = new System.Windows.Forms.RadioButton();
             this.checkBoxShortSleeve = new System.Windows.Forms.CheckBox();
             this.checkBoxChupin = new System.Windows.Forms.CheckBox();
-            this.checkBoxLongSleeve = new System.Windows.Forms.CheckBox();
+            this.checkBoxMaoNeck = new System.Windows.Forms.CheckBox();
             this.groupBoxGarment = new System.Windows.Forms.GroupBox();
-            this.labelTittleStock = new System.Windows.Forms.Label();
-            this.textDisponibleStock = new System.Windows.Forms.TextBox();
+            this.labelUnitStock = new System.Windows.Forms.Label();
             this.groupBoxStock = new System.Windows.Forms.GroupBox();
             this.radioButtonStandard = new System.Windows.Forms.RadioButton();
             this.radioButtonPremium = new System.Windows.Forms.RadioButton();
@@ -220,21 +219,21 @@ namespace Examen_Practico
             this.checkBoxChupin.UseVisualStyleBackColor = true;
             this.checkBoxChupin.CheckedChanged += new System.EventHandler(this.checkBoxChupin_CheckedChanged);
             // 
-            // checkBoxLongSleeve
+            // checkBoxMaoNeck
             // 
-            this.checkBoxLongSleeve.AutoSize = true;
-            this.checkBoxLongSleeve.Location = new System.Drawing.Point(313, 31);
-            this.checkBoxLongSleeve.Name = "checkBoxLongSleeve";
-            this.checkBoxLongSleeve.Size = new System.Drawing.Size(95, 20);
-            this.checkBoxLongSleeve.TabIndex = 1;
-            this.checkBoxLongSleeve.Text = "Cuello mao";
-            this.checkBoxLongSleeve.UseVisualStyleBackColor = true;
-            this.checkBoxLongSleeve.CheckedChanged += new System.EventHandler(this.checkBoxLongSleeve_CheckedChanged);
+            this.checkBoxMaoNeck.AutoSize = true;
+            this.checkBoxMaoNeck.Location = new System.Drawing.Point(313, 31);
+            this.checkBoxMaoNeck.Name = "checkBoxMaoNeck";
+            this.checkBoxMaoNeck.Size = new System.Drawing.Size(95, 20);
+            this.checkBoxMaoNeck.TabIndex = 1;
+            this.checkBoxMaoNeck.Text = "Cuello mao";
+            this.checkBoxMaoNeck.UseVisualStyleBackColor = true;
+            this.checkBoxMaoNeck.CheckedChanged += new System.EventHandler(this.checkBoxMaoNeck_CheckedChanged);
             // 
             // groupBoxGarment
             // 
             this.groupBoxGarment.BackColor = System.Drawing.Color.Indigo;
-            this.groupBoxGarment.Controls.Add(this.checkBoxLongSleeve);
+            this.groupBoxGarment.Controls.Add(this.checkBoxMaoNeck);
             this.groupBoxGarment.Controls.Add(this.checkBoxChupin);
             this.groupBoxGarment.Controls.Add(this.checkBoxShortSleeve);
             this.groupBoxGarment.Controls.Add(this.radioButtonTrousers);
@@ -249,38 +248,23 @@ namespace Examen_Practico
             this.groupBoxGarment.TabStop = false;
             this.groupBoxGarment.Text = "Prenda";
             // 
-            // labelTittleStock
+            // labelUnitStock
             // 
-            this.labelTittleStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelUnitStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTittleStock.AutoSize = true;
-            this.labelTittleStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTittleStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTittleStock.Location = new System.Drawing.Point(17, 16);
-            this.labelTittleStock.Name = "labelTittleStock";
-            this.labelTittleStock.Size = new System.Drawing.Size(177, 15);
-            this.labelTittleStock.TabIndex = 0;
-            this.labelTittleStock.Text = "Unidades de stock disponibles:";
-            this.labelTittleStock.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textDisponibleStock
-            // 
-            this.textDisponibleStock.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textDisponibleStock.BackColor = System.Drawing.Color.Indigo;
-            this.textDisponibleStock.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textDisponibleStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDisponibleStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textDisponibleStock.Location = new System.Drawing.Point(190, 15);
-            this.textDisponibleStock.MaxLength = 4;
-            this.textDisponibleStock.Name = "textDisponibleStock";
-            this.textDisponibleStock.Size = new System.Drawing.Size(53, 21);
-            this.textDisponibleStock.TabIndex = 1;
-            this.textDisponibleStock.TextChanged += new System.EventHandler(this.textDisponibleStock_TextChanged);
+            this.labelUnitStock.AutoSize = true;
+            this.labelUnitStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUnitStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelUnitStock.Location = new System.Drawing.Point(17, 16);
+            this.labelUnitStock.Name = "labelUnitStock";
+            this.labelUnitStock.Size = new System.Drawing.Size(177, 15);
+            this.labelUnitStock.TabIndex = 0;
+            this.labelUnitStock.Text = "Unidades de stock disponibles:";
+            this.labelUnitStock.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBoxStock
             // 
-            this.groupBoxStock.Controls.Add(this.textDisponibleStock);
-            this.groupBoxStock.Controls.Add(this.labelTittleStock);
+            this.groupBoxStock.Controls.Add(this.labelUnitStock);
             this.groupBoxStock.Location = new System.Drawing.Point(12, 284);
             this.groupBoxStock.Name = "groupBoxStock";
             this.groupBoxStock.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -363,7 +347,6 @@ namespace Examen_Practico
             this.texCount.Name = "texCount";
             this.texCount.Size = new System.Drawing.Size(61, 21);
             this.texCount.TabIndex = 1;
-            this.texCount.TextChanged += new System.EventHandler(this.texCount_TextChanged);
             // 
             // groupBoxUnitPriceAndCount
             // 
@@ -450,10 +433,9 @@ namespace Examen_Practico
         private System.Windows.Forms.RadioButton radioButtonTrousers;
         private System.Windows.Forms.CheckBox checkBoxShortSleeve;
         private System.Windows.Forms.CheckBox checkBoxChupin;
-        private System.Windows.Forms.CheckBox checkBoxLongSleeve;
+        private System.Windows.Forms.CheckBox checkBoxMaoNeck;
         private System.Windows.Forms.GroupBox groupBoxGarment;
-        private System.Windows.Forms.Label labelTittleStock;
-        private System.Windows.Forms.TextBox textDisponibleStock;
+        private System.Windows.Forms.Label labelUnitStock;
         private System.Windows.Forms.GroupBox groupBoxStock;
         private System.Windows.Forms.RadioButton radioButtonStandard;
         private System.Windows.Forms.RadioButton radioButtonPremium;

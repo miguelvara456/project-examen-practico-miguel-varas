@@ -20,9 +20,9 @@ namespace Examen_Practico
             quotes = new List<Quote>(0);
         }
 
-        public void CreateQuote()
+        public void RegistreryQuote(Quote quote)
         {
-
+            quotes.Add(quote);
         }
 
 

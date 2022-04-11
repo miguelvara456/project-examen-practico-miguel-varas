@@ -12,12 +12,17 @@ namespace Examen_Practico
 {
     public partial class Form2 : Form
     {
-        public Form2(List<Quote> list)
+        public Form2()
         {
             InitializeComponent();
+        }
+
+        public void UpdateListQuotedList(List<Quote> list)
+        {
             foreach (var quote in list)
             {
-                listBoxQuotes.Items.Add(quote);
+                var descriptionQuote = $"ID: {quote.NumberId} | Prenda: {quote.QuotedGarment.GetType().Name} | Unidades: {quote.QuotedUnits} | Hora y Fecha: {quote.DateHour} | Codigo Vendedor: {quote.SellerCode} | Total: {quote.QuotedResult}";
+                listBoxQuotes.Items.Add(descriptionQuote);
             }
         }
     }

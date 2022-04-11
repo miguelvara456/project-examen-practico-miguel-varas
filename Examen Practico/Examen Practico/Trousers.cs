@@ -9,11 +9,5 @@ namespace Examen_Practico
     public class Trousers : Garment
     {
         public bool chupin;
-        public Trousers(QualityGarment quality,float priceUnit, int count)
-        {
-            this.Quality = quality;
-            this.PriceUnit = priceUnit;
-            this.Count = count;
-        }
     }
 }
