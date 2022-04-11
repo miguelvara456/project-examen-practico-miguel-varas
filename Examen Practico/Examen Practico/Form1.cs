@@ -177,8 +177,12 @@ namespace Examen_Practico
                     if(trousers.chupin)
                     {
                         trousers.count = 750;
-                        labelUnitStock.Text = $"Unidades de stock disponibles: {trousers.count}";
                     }
+                    else
+                    {
+                        trousers.count = 250;
+                    }
+                    labelUnitStock.Text = $"Unidades de stock disponibles: {trousers.count}";
                     garmentActual = trousers;
                 }
                 else if(radioButtonShirt.Checked)
@@ -208,7 +212,7 @@ namespace Examen_Practico
 
         private void radioButtonStandard_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButtonPremium.Checked)
+            if (radioButtonStandard.Checked)
             {
                 if (radioButtonTrousers.Checked)
                 {
