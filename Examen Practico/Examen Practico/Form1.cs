@@ -19,6 +19,18 @@ namespace Examen_Practico
         {
             InitializeComponent();
             Boot();
+            InitializeUI();
+        }
+        private void Boot()
+        {
+            shop = new Shop("Abasto", "Av. Corrientes 1234", "Capital Federal", "1233", "Buenos Aires");
+            seller = new Seller("Miguel Varas", 1238493812);
+            shop.AddGarmentToShop(new Shirts());
+            shop.AddGarmentToShop(new Trousers());
+        }
+
+        private void InitializeUI()
+        {
             labelNameShop.Text = shop.ShopName;
             labelAddressShop.Text = shop.Address;
             labelLastNameAndSellerCode.Text = $"{seller.LastName} | Codigo Vendedor: {seller.SellerCode}";
@@ -29,13 +41,6 @@ namespace Examen_Practico
             radioButtonStandard.Enabled = false;
             texCount.Enabled = false;
             textPrice.Enabled = false;
-        }
-        private void Boot()
-        {
-            shop = new Shop("Abasto", "Av. Corrientes 1234", "Capital Federal", "1233", "Buenos Aires");
-            seller = new Seller("Miguel Varas", 1238493812);
-            shop.AddGarmentToShop(new Shirts());
-            shop.AddGarmentToShop(new Trousers());
         }
         private void radioButtonTrousers_CheckedChanged(object sender, EventArgs e)
         {

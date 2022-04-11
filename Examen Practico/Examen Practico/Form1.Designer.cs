@@ -383,7 +383,7 @@ namespace Examen_Practico
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(114, 31);
             this.labelResult.TabIndex = 8;
-            this.labelResult.Text = "10.500";
+            this.labelResult.Text = "0";
             // 
             // Form1
             // 
